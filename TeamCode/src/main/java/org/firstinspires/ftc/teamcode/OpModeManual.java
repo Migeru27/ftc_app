@@ -13,7 +13,7 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 
 @TeleOp(name="TeleOp", group="Linear Opmode")  //TODO: Change group name
 @Disabled
-public class TeleOp extends LinearOpMode {
+public class OpModeManual extends LinearOpMode {
 
     /* Declare OpMode members. */
     private ElapsedTime runtime = new ElapsedTime();
