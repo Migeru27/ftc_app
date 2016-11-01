@@ -34,18 +34,18 @@ public class OpModeManual extends LinearOpMode {
          */
         leftMotor  = hardwareMap.dcMotor.get("left_drive");
         rightMotor = hardwareMap.dcMotor.get("right_drive");
-		armMotorA = hardwareMap.dcMotor.game("arm_rotator");
-		armMotorB = hardwareMap.dcMotor.game("arm_joint_1");
-		armMotorC = hardwareMap.dcMotor.game("arm_joint_2");
+        armMotorA = hardwareMap.dcMotor.get("arm_rotator");
+        armMotorB = hardwareMap.dcMotor.get("arm_joint_1");
+        armMotorC = hardwareMap.dcMotor.get("arm_joint_2");
 
         // Set the drive motor directions:
         // "Reverse" the motor that runs backwards when connected directly to the battery
 		// TODO: Test directions of motors
         leftMotor.setDirection(DcMotor.Direction.FORWARD);
         rightMotor.setDirection(DcMotor.Direction.REVERSE);
-		armMotorA.setDirection(DcMotor.Direction.FORWARD);
-		armMotorB.setDirection(DcMotor.Direction.FORWARD);
-		armMotorC.setDirection(DcMotor.Direction.FORWARD)
+        armMotorA.setDirection(DcMotor.Direction.FORWARD);
+        armMotorB.setDirection(DcMotor.Direction.FORWARD);
+        armMotorC.setDirection(DcMotor.Direction.FORWARD);
 		
 
         // Wait for the game to start (driver presses PLAY)
@@ -58,7 +58,7 @@ public class OpModeManual extends LinearOpMode {
             telemetry.update();
 
             // Tank controls using joystick
-			//TODO: Add joystick controls for arm motors
+            // TODO: Add joystick controls for arm motors
             leftMotor.setPower(-gamepad1.left_stick_y);
             rightMotor.setPower(-gamepad1.right_stick_y);
         }
